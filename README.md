@@ -3,7 +3,7 @@
 Reversi can be played as a human or a computer. If played as a computer, the user inputs the move to make.
 
 Computer Player
-	<pre><filename> <black|white> <time in seconds></pre>
+	<pre>`<filename> <black|white> <time in seconds>`</pre>
 
 Human Player
 	`<filename> <black|white> <location to place piece> <some char>`
