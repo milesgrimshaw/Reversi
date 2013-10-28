@@ -77,10 +77,12 @@ The board is printed to stdout as follows:
 
 When making a move as a human player, the move is entered as XY, where X is the x co-ordinate from 1-8 and Y is the y co-ordinate from 1-8. For example, if a human playing as white wants to make a move at A, the location of the new piece will be: 53.
 
+## Outcomes
+
+My AI has yet to loose to a human player. I am still waiting on the final results of games against my brother!
+
 ## To Do
 
 An obvious next step to improve the progam is to use alpha-beta pruning on the tree. This would improve the compute time and leave more time for brute force. 
 
 I would also like to test different point values per square in the evaluation function. 
-
-
