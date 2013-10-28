@@ -77,16 +77,18 @@ int main (int argc, char* argv[]) {
 		if (strcmp(argv[2], "black")==0)
 			is_black = true;
 
-		//	Play as computer or human
+		//	If the number of arguments is 4 then play as a computer
 		if (argc == 4) {
 			//	Get the time limit for the computer to make a move
 			float time_limit = atoi(argv[3]);
 			computerPlayer(file_name, is_black, time_limit);
 		}
-		//	else argc == 5
+		
+		//	Else play as a human
 		else {			
 			humanPlayer(file_name, is_black, atoi(argv[3]));	
 		}
+
 	}
 } 
 
@@ -643,8 +645,4 @@ void writeBoard (char* final_file_name, char* board) {
 		fprintf(fp, "\n");
 	}
 	fclose(fp);
-}
-
-void printBoardScore(char* board) {
-
 }

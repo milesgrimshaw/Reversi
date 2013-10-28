@@ -11,29 +11,37 @@
 
 char *getLine(FILE *fp)
 {
-    char *line;                 // Line being read
-    int size;                   // #chars allocated
+    // Line being read
+    char *line;                 
+    // #chars allocated
+    int size;                   
     int c, i;
 
-    size = sizeof(double);                      // Minimum allocation
+    // Minimum allocation  
+    size = sizeof(double);                      
     line = malloc (size);
     for (i = 0;  (c = getc(fp)) != EOF; )  {
 	if (i == size-1) {
-	    size *= 2;                          // Double allocation
+	    // Double allocation
+        size *= 2;                          
 	    line = realloc (line, size);
 	}
 	line[i++] = c;
-	if (c == '\n')                          // Break on newline
+	// Break on newline
+    if (c == '\n')                          
 	    break;
     }
 
-    if (c == EOF && i == 0)  {                  // Check for immediate EOF
+    // Check for immediate EOF
+    if (c == EOF && i == 0)  {
 	free (line);
 	return NULL;
     }
 
-    line[i++] = '\0';                           // Terminate line
-    line = realloc (line, i);                   // Trim excess storage
+    // Terminate line
+    line[i++] = '\0';                           
+    // Trim excess storage
+    line = realloc (line, i);                   
 
     return (line);
 }

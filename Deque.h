@@ -1,9 +1,6 @@
 // Deque.h
-//
 // Define the abstract data type for a Deque of string pointers.  The strings
 // themselves are NOT stored.
-
-// Define true and false
 
 #include <stdbool.h>
 
@@ -28,5 +25,3 @@ void remD (Deque *d, Tree* new_node);
 int isEmptyD (Deque *d);
 
 int destroyD (Deque* d);
-
-////////////////////////////////////////////////////////////////////////////////////////////
